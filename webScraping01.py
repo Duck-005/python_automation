@@ -43,7 +43,7 @@ usn = []
 for branchCode in branchCodeDict:
     sno = '1'
     i = int(sno)
-    for i in range(branchCodeDict['CI']):
+    for i in range(branchCodeDict['branchCode']):
         WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.ID, 'usn'))
         )
@@ -76,6 +76,6 @@ for branchCode in branchCodeDict:
 # convert the extracted data to Excel sheets
 df_dict = {'names': names, 'usn': usn, 'sgpa': sgpa, 'cgpa': cgpa}
 df = pd.DataFrame(df_dict)
-df.to_csv('student_GPA_ISEM.csv')
+df.to_csv('student_GPA_ISEM.csv', mode = 'a')
 
 driver.quit()
