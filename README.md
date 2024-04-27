@@ -25,11 +25,11 @@ but the actual browser being controlled is so much fun.
 
 ### IMPORTANT
 
-```
+<pre>
 To run the script, we need to install the chrome driver which uses the WebDriver API.
-Install it from [here](https://googlechromelabs.github.io/chrome-for-testing/).
+Install it from <a href = "https://googlechromelabs.github.io/chrome-for-testing/"> googleChromeLabs </a>
 More drivers for other browsers are also available.
-```
+</pre>
 ```
 branchCodeDict = {'CI': 143, 'CS': 229, 'CY': 75, 'IS': 160}
 
