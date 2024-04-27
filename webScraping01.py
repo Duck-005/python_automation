@@ -43,14 +43,14 @@ usn = []
 for branchCode in branchCodeDict:
     sno = '1'
     i = int(sno)
-    for i in range(branchCodeDict['branchCode']):
+    for i in range(branchCodeDict[branchCode]):
         WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.ID, 'usn'))
         )
 
         # Enter the usn and click go ( automatically )
         input_element.clear()
-        USN = prefix + 'CI' + sno.zfill(3) + postfix
+        USN = prefix + branchCode + sno.zfill(3) + postfix
         input_element.send_keys(USN)
         go_element = driver.find_element(By.CLASS_NAME, 'buttongo')
         go_element.click()
