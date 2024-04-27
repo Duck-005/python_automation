@@ -30,6 +30,7 @@ postfix = '-T'
 branchCodeDict = {'CI': 143, 'CS': 229, 'CY': 75, 'IS': 160}
 # branchCodeDict = {'CI': 143}
 
+# XPATH details of the elements you want to locate
 sgpaXPATH = '/html/body/div[2]/div/div/div[4]/div/div/div[1]/div/div[3]/div/p'
 cgpaXPATH = '/html/body/div[2]/div/div/div[4]/div/div/div[1]/div/div[4]/div/p'
 nameXPATH = '/html/body/div[2]/div/div/div[3]/div/div/div[1]/div/h3'
@@ -55,6 +56,7 @@ for branchCode in branchCodeDict:
         go_element.click()
 
         try:
+            # locating the element and converting the text to strings
             name = driver.find_element(By.XPATH, nameXPATH).text
             CGPA = driver.find_element(By.XPATH, cgpaXPATH).text
             SGPA = driver.find_element(By.XPATH, sgpaXPATH).text
