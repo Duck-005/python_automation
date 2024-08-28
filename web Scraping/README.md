@@ -1,6 +1,6 @@
 # Web Scraping
 ## Exam results website scraping
-The script is written in python and automatically logins to the students page and 
+The script is written in python and automatically logins to the MSRIT students page and 
 extracts data such as sgpa, cgpa, name and such.
 
 This auto login is possible because no password such as DOB is required and only
